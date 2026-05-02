@@ -20,7 +20,7 @@ To document my learning, improve problem-solving skills, and build a cybersecuri
 ---
 
 ## 🧠 Latest Writeups
-- picoCTF/web/Old Session/picoctf-challenge-web_exploitation-Old_Sessions.md
+- [Old Sessions Writeup](picoCTF/web/Old Session/picoctf-challenge-web_exploitation-Old_Sessions.md)
 
 ---
 
