@@ -1,7 +1,7 @@
 # 🧩 Undo - 🧩 Text Transformations
 ![Platform](https://img.shields.io/badge/Platform-picoCTF-blue)
-![Category](https://img.shields.io/badge/Category-<Category>-green)
-![Difficulty](https://img.shields.io/badge/Difficulty-<Easy%7CMedium%7CHard>-red)
+![Category](https://img.shields.io/badge/Category-General-green)
+![Difficulty](https://img.shields.io/badge/Difficulty-Easy-red)
 
 **Platform:** picoCTF  
 **Category:** General  
