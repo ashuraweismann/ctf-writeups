@@ -21,6 +21,9 @@ To document my learning, improve problem-solving skills, and build a cybersecuri
 
 ## 🧠 Latest Writeups
 
+- [The Concierge Knows Too Much Writeup](TryHackMe/Byte-Lotus_Hacker-Holiday/The-Concierge-Knows-Too-Much_walkthrough.md)
+- [Room-404 Writeup](TryHackMe/Byte-Lotus_Hacker-Holiday/Room-404_walkthrough.md)
+- [Complimentary Writeup](TryHackMe/Byte-Lotus_Hacker-Holiday/Complimentary_walkthrough.md)
 - [Old Sessions Writeup](picoCTF/web/Old-Session/picoctf-challenge-web_exploitation-Old_Sessions.md)
 
 ---

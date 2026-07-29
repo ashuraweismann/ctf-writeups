@@ -1,8 +1,8 @@
-# Byte Lotus - Complimentary
+# Walkthrough – Byte Lotus: Complimentary
 ## Walkthrough
 
 **Challenge Category:** Cloud Security (AWS)  
-**Difficulty:** Medium  
+**Difficulty:** Easy  
 **Platform:** TryHackMe - Hacker Holidays
 
 ---
