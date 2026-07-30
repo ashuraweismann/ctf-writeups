@@ -182,29 +182,66 @@ The following Python script automates the decoding process:
 
 ```python
 import base64
+from pathlib import Path
 
 KEY = b"H0t3lSt@ff0NlyK3epS3cr3t!"
 
-def xor_decrypt(data):
+
+def xor_decrypt(data: bytes, key: bytes) -> bytes:
     return bytes(
-        b ^ KEY[i % len(KEY)]
-        for i, b in enumerate(data)
+        byte ^ key[index % len(key)]
+        for index, byte in enumerate(data)
     )
 
-with open("cookies.txt") as f:
-    recovered = ""
 
-    for line in f:
-        if "hotel_sess_state=" not in line:
+def extract_cookie_value(line: str) -> str | None:
+    marker = "hotel_sess_state="
+
+    if marker not in line:
+        return None
+
+    value = line.split(marker, 1)[1]
+
+    # Remove any additional cookies if present.
+    return value.split(";", 1)[0].strip()
+
+
+def main() -> None:
+    cookie_file = Path("cookies.txt")
+
+    if not cookie_file.exists():
+        raise FileNotFoundError("cookies.txt was not found")
+
+    recovered_characters: list[str] = []
+
+    for line_number, line in enumerate(
+        cookie_file.read_text(encoding="utf-8").splitlines(),
+        start=1,
+    ):
+        encoded_value = extract_cookie_value(line)
+
+        if not encoded_value:
             continue
 
-        value = line.strip().split("hotel_sess_state=", 1)[1]
-        value = value.split(";", 1)[0]
+        try:
+            encrypted_data = base64.b64decode(encoded_value)
+            decrypted_data = xor_decrypt(encrypted_data, KEY)
+            recovered_characters.append(
+                decrypted_data.decode("utf-8", errors="replace")
+            )
+        except Exception as error:
+            print(f"[!] Could not decode line {line_number}: {error}")
 
-        encrypted = base64.b64decode(value)
-        recovered += xor_decrypt(encrypted).decode()
+    recovered_text = "".join(recovered_characters)
 
-print(recovered)
+    print("[+] Recovered keystrokes:")
+    print("-" * 50)
+    print(recovered_text)
+    print("-" * 50)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
 Run the script:
