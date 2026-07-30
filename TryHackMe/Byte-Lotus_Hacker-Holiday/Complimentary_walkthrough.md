@@ -29,7 +29,7 @@ This behavior suggests that the application is authenticating visitors automatic
 
 > 
 >
-> ![Challenge Homepage](images/01_homepage.png)
+> ![Challenge Homepage](images/Complimentary/01_homepage.png)
 
 ---
 
@@ -61,7 +61,7 @@ Important findings:
 
 > 
 >
-> ![Exposed JavaScript](images/02_javascript.png)
+> ![Exposed JavaScript](images/Complimentary/02_javascript.png)
 
 ---
 
@@ -99,7 +99,7 @@ These credentials are sufficient to authenticate directly with AWS.
 
 > 
 >
-> ![Cognito Temporary Credentials](images/03_cognito_credentials.png)
+> ![Cognito Temporary Credentials](images/Complimentary/03_cognito_credentials.png)
 
 ---
 
@@ -119,7 +119,7 @@ aws --version
 
 > 
 >
-> ![AWS CLI Installed](images/04_aws_cli_version.png)
+> ![AWS CLI Installed](images/Complimentary/04_aws_cli_version.png)
 
 ---
 
@@ -146,7 +146,7 @@ aws_session_token=SESSION_TOKEN
 
 Create the configuration file.
 
-![Create the configuration file](images/05_Create_the_configuration_file.png)
+![Create the configuration file](images/Complimentary/05_Create_the_configuration_file.png)
 
 ```
 C:\Users\<username>\.aws\config
@@ -172,7 +172,7 @@ Successful output confirms that the temporary credentials are valid.
 
 > 
 >
-> ![STS Get Caller Identity](images/06_sts_get_caller_identity.png)
+> ![STS Get Caller Identity](images/Complimentary/06_sts_get_caller_identity.png)
 
 ---
 
@@ -206,7 +206,7 @@ instead of being restricted to its own data.
 
 > 
 >
-> ![DynamoDB Scan Command](images/07_dynamodb_scan.png)
+> ![DynamoDB Scan Command](images/Complimentary/07_dynamodb_scan.png)
 
 ---
 
@@ -230,7 +230,7 @@ THM{fr33_app_fr33_d4t4!}
 
 > 
 >
-> ![Flag in DynamoDB Record](images/08_flag.png)
+> ![Flag in DynamoDB Record](images/Complimentary/08_flag.png)
 
 ---
 
