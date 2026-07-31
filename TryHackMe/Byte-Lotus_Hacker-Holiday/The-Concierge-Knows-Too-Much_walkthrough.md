@@ -1,4 +1,4 @@
-# Walkthrough – Byte Lotus: The Concierge Knows Too Much Writeup
+# Walkthrough – Byte Lotus: The Concierge Knows Too Much
 
 ## Challenge Information
 
